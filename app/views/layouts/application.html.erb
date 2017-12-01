@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Deep</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Unica+One::latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <h1><a href="/">Deep</a></h1>
+      <h2><a href="/">〜 Deepな記事をつくる・届けるメディア 〜</a></h2>
+      <span id="hum_line" class="hum_icon" ontouchstart="" >≡</span>
+      <nav ontouchstart="" class="hum_menu">
+       <ul>
+        <% if user_signed_in? %>
+          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to "マイページ", user_path(current_user) %></li>
+          <li><%= link_to "プロフィール編集", edit_user_path(current_user) %></li>
+        <% else %>
+          <li><%= link_to '新規登録', new_user_registration_path, method: :get %></li>
+          <li><%= link_to 'ログイン', new_user_session_path, method: :get %></li>
+        <% end %>
+        <li><a href="/tweets/new">投稿する</a></li>
+        <li><a href=" /likes">カテゴリから探す</a></li>
+        <li><a href=" /likes">お気に入り一覧</a></li>
+       </ul>
+      </nav>
+    </header>
+     <div class="tanaka-contents">
+          <%= yield %>
+      </div>
+    <footer>
+      <p>
+        © Deep 2017 All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>

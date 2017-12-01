@@ -1,0 +1,22 @@
+<div class="tweet_content top_content">
+  <div class="tweet_header">
+    <div class="tweet_image icon_image" style="background-image: url(<%= tweet.user.avatar.url(:medium) %>);"></div>
+    <div class="tweet_user_info user_info">
+      <span><%= link_to tweet.user.name, user_path(tweet.user) %></span>
+      <time><%= time_ago_in_words tweet.created_at %></time>
+    </div>
+  </div>
+  <div class="tweet_body">
+    <div class="tweet_box">
+      <span class="q">Q</span>
+      <span class="tweet_text"><%= tweet.text %></span>
+    </div>
+    <div class="tweeted">
+      <%= link_to "回答#{tweet.tweet_comments.count}件", tweet_path(tweet) %>
+    </div>
+    <%= form_tag(new_tweet_comment_path, method: :get, class: "tweet_submit") do %>
+      <%= hidden_field_tag(:tweet_id, tweet.id) %>
+      <%= submit_tag("回答する") %>
+    <% end %>
+  </div>
+</div>

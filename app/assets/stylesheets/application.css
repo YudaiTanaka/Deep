@@ -1,0 +1,95 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.hum_icon{
+  position:fixed;
+  top: 50px;
+  right: 80px;
+  font-size:170px;
+  z-index:10000;
+  color: white;
+  background-color: black;
+  border-radius:10px;
+  width: 80px;
+  height: 50px;
+  display: inline-block;
+  text-align:center;
+  line-height:100px;
+  outline:none;
+}
+
+.hum_menu{
+  z-index: 9999;
+  position: fixed;
+  top: -100%;
+  right: 0%;
+  width: 100%;
+  background-color: black;
+  border-radius: 50px 0 30px 50px;
+  margin-top: 270px;
+}
+
+
+
+.hum_menu a{
+  text-decoration:none;
+  color:#fff;
+}
+
+.hum_menu li{
+  text-decoration:none;
+  list-style:none;
+  background-color: black;
+  padding: 40px 140px;
+}
+
+
+.hum_menu:hover,
+.hum_icon:hover + .hum_menu{
+  top:20px;
+  transition-property:all;
+  transition-duration:400ms;
+  transition-timing-function:ease-in-out;
+}
+.hum_icon:hover + .hum_menu{
+  display:block;
+  top:20px;
+  transition-property:all;
+  transition-duration:400ms;
+  transition-timing-function:ease-in-out;
+}
+
+.hum_icon:hover{
+  border-radius:10px 10px 0 0px;
+  animation-name: rotation;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotatez(0);
+  }
+
+  50% {
+    transform:  rotatez(-180deg);
+  }
+
+  100% {
+    transform: rotatez(-360deg);
+  }
+}

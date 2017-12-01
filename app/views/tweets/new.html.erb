@@ -1,0 +1,13 @@
+<div class="contents row">
+  <%= form_tag('/tweets', :multipart => true, method: :post) do %>
+    <h3>
+      投稿しよう！
+    </h3>
+    <input placeholder="投稿カテゴリを選択する" type="text" name="post_category">
+    <input placeholder="内容カテゴリを選択する" type="text" name="content_category">
+    <textarea cols="30" name="text" placeholder="例：最近旦那の帰りが遅く..." rows="7"></textarea>
+    <input type="file" name="avatar">
+    <input type="submit" value="投稿">
+  <% end %>
+</div>
+
