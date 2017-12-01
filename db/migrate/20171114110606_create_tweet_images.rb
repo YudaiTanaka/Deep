@@ -4,7 +4,6 @@ class CreateTweetImages < ActiveRecord::Migration
       t.string :image
       t.integer :tweet_id
       t.timestamps null: false
-      add_attachment :orders, :file
     end
   end
 end
