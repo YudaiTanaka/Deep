@@ -143,6 +143,7 @@ h4 {
   font-size: 50px;
   text-align: center;
   color: white;
+  background-color: black;
 }
 
 h5,h6,body {
@@ -185,13 +186,14 @@ a {
 
 .btn {
     @include basePadding(50px 20px);
-    font-size: 65px;
+    font-size: 50px;
     color: black;
     font-weight: bold;
     text-align: center;
     border-radius: 30px;
     display: inline-block;
-    margin-top:80px;
+    margin-top: 70px;
+    background-color: white;
   &:hover {
     border-color: lighten($accent, 15%);
     color: lighten($accent, 15%);
@@ -473,7 +475,7 @@ footer {
 
 .col-lg-12{
   h3{
-    color: red;
+    color: white;
   }
 }
 
@@ -487,9 +489,9 @@ footer {
 
 .comments{
   p{
-    color: red;
+    color: white;
     a{
-      color: blue;
+      color: yellow;
     }
   }
 }

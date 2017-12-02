@@ -30,6 +30,7 @@
       <span id="hum_line" class="hum_icon" ontouchstart="" >≡</span>
       <nav ontouchstart="" class="hum_menu">
        <ul>
+          <li><a href="/">HOME</a></li>
         <% if user_signed_in? %>
           <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
           <li><%= link_to "マイページ", user_path(current_user) %></li>
@@ -39,8 +40,6 @@
           <li><%= link_to 'ログイン', new_user_session_path, method: :get %></li>
         <% end %>
         <li><a href="/tweets/new">投稿する</a></li>
-        <li><a href=" /likes">カテゴリから探す</a></li>
-        <li><a href=" /likes">お気に入り一覧</a></li>
        </ul>
       </nav>
     </header>

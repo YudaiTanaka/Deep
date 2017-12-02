@@ -15,7 +15,7 @@
     <%= simple_format(@tweet.text) %>
     <span class="name">
       <a href="/users/<%= @tweet.user.id %>">
-        <span>投稿者</span><%= @tweet.user.nickname %>
+        <span>投稿者：</span><%= @tweet.user.nickname %>
       </a>
     </span>
   </div>
