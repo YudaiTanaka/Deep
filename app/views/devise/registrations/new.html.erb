@@ -36,3 +36,7 @@
     <%= link_to "ログイン", new_session_path(resource_name), class:"login_btn" %><br />
   <% end -%>
 </div>
+
+<div class="login_box">
+  <%= link_to "Facebookで会員登録", user_facebook_omniauth_authorize_path(resource_name), class:"login_btn" %>
+</div>

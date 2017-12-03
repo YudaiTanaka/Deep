@@ -54,6 +54,9 @@ end
   gem 'pry-rails'
   gem 'kaminari'
   gem 'paperclip'
+  gem "omniauth", '~>1.6'
+  gem "omniauth-facebook", '~> 4.0'
+  gem 'dotenv-rails'
 
   group :production do
   gem 'rails_12factor'
