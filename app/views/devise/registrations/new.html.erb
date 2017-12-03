@@ -31,4 +31,8 @@
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<div class="login_box">
+  <%- if controller_name != 'sessions' %>
+    <%= link_to "ログイン", new_session_path(resource_name), class:"login_btn" %><br />
+  <% end -%>
+</div>

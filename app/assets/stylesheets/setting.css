@@ -280,6 +280,22 @@ input[type="submit"] {
   background-color: white;
 }
 
+.login_box{
+  background-color: white;
+  width: 860px;
+  height: 100px;
+  margin: 30px auto 0;
+  border-radius: 50px;
+}
+
+.login_btn{
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 65px;
+  color: black;
+  line-height: 95px;
+}
+
 /*
  * Re-set default cursor for disabled elements. */
 button[disabled],
@@ -295,6 +311,7 @@ input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
+  height: 30px;
   /* 2 */
 }
 
