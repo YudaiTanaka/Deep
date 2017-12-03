@@ -3,8 +3,14 @@
   <h3>
     編集する
   </h3>
+  <textarea cols="50" placeholder="投稿カテゴリを選択する" type="text" name="post_category"><%= @tweet.post_category %></textarea>
+
+  <input placeholder="内容カテゴリを選択する" type="text" name="content_category"><%= @tweet.content_category %>
+
+  <textarea cols="30" name="text" placeholder="例：気になる人からのLINEが帰ってこないです..." rows="7"><%= @tweet.text %></textarea>
+
   <input type="file" name="avatar">
-  <textarea cols="30" name="text" placeholder="text" rows="10"><%= @tweet.text %></textarea>
-  <input type="submit" value="投稿する">
+
+  <input type="submit" value="更新する">
   <% end %>
 </div>

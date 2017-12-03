@@ -400,7 +400,7 @@ div.contents.row {
       font-size: 13px;
       a {
         display: block;
-        color: #aaa;
+        color: black;
         &:hover {
           text-decoration: underline;
           color: #aaa;
@@ -424,20 +424,21 @@ div.contents.row {
       font-weight: normal;
       font-size: 70px;
       color: white;
+      border: 6px solid black;
+      border-radius: 40px;
     }
     input,textarea {
       width: 100%;
       @include boxBase(5px 0 15px,10px);
-      border: 1px solid $gray;
-      border-radius: 5px;
+      border: 6px solid black;
+      border-radius: 40px;
       font-family: "游ゴシック", "YuGothic";
     }
     input[type="submit"] {
       @extend .transition;
       background-color: black;
-      border-radius: 20px;
+      border-radius: 40px;
       color: white;
-      border: 0;
       font-size: 70px;
       &:hover {
         background-color: lighten($accent, 10%);
