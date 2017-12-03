@@ -296,6 +296,21 @@ input[type="submit"] {
   line-height: 95px;
 }
 
+.facebook_box{
+  background-color: darkblue;
+  width: 860px;
+  height: 100px;
+  margin: 30px auto 0;
+  border-radius: 50px;
+}
+
+.facebook_btn{
+  cursor: pointer;
+  font-size: 55px;
+  color: white;
+  line-height: 95px;
+}
+
 /*
  * Re-set default cursor for disabled elements. */
 button[disabled],
