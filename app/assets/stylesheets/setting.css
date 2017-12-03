@@ -275,6 +275,7 @@ input[type="submit"] {
   cursor: pointer;
   /* 3 */
   margin-top:95px;
+  font-weight: bold;
   font-size: 65px;
 }
 
