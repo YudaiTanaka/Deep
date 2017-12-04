@@ -277,13 +277,13 @@ input[type="submit"] {
   margin-top:95px;
   font-weight: bold;
   font-size: 55px;
-  background-color: white;
+  background-color: navajowhite;
   width: 860px;
   height: 100px;
 }
 
 .login_box{
-  background-color: white;
+  background-color: navajowhite;
   width: 860px;
   height: 100px;
   margin: 30px auto 0;
