@@ -278,6 +278,8 @@ input[type="submit"] {
   font-weight: bold;
   font-size: 55px;
   background-color: white;
+  width: 860px;
+  height: 100px;
 }
 
 .login_box{
