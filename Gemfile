@@ -57,6 +57,7 @@ end
   gem "omniauth", '~>1.6'
   gem "omniauth-facebook", '~> 4.0'
   gem 'dotenv-rails'
+  gem 'thin'
 
   group :production do
   gem 'rails_12factor'
